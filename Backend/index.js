@@ -45,6 +45,24 @@ app.post('/add-student', (req, res) => {
     });
 });
 
+
+
+
+// Route to fetch all students
+app.get('/students', (req, res) => {
+    const query = 'SELECT * FROM students';  // SQL query to fetch all students
+  
+    db.query(query, (err, results) => {
+      if (err) {
+        console.error('Error fetching students:', err);
+        return res.status(500).json({ message: 'Failed to fetch students' });
+      }
+  
+      // Send the list of students as the response
+      return res.json(results);
+    });
+  });
+
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => {
