@@ -1,0 +1,10 @@
+/* src/index.css */
+
+/* Add the Tailwind base styles */
+@tailwind base;
+
+/* Add Tailwind component styles */
+@tailwind components;
+
+/* Add Tailwind utility styles */
+@tailwind utilities;
